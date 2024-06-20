@@ -10,6 +10,8 @@ RUN apt-get update && \
       sudo \
       vim \
       build-essential \
+      libpq-dev \
+      postgresql-server-dev-all \
       ssh && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
