@@ -5,6 +5,7 @@ RUN apt-get update && \
       git \
       g++ \
       cmake \
+      docker \
       ninja-build \
       libssl-dev \
       sudo \

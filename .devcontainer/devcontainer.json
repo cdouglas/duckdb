@@ -8,5 +8,7 @@
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     }
-  }
+  },
+  // TODO find a property for the checkout
+  "onCreateCommand": "cd /workspaces/duckdb; GEN=ninja make"
 }
