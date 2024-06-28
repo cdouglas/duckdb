@@ -3,10 +3,19 @@
   "build": {
     "dockerfile": "./Dockerfile"
   },
-
+  "runArgs": [
+    "--privileged"
+  ],
   "features": {
     "ghcr.io/devcontainers/features/sshd:1": {
       "version": "latest"
     }
-  }
+  },
+  "mounts": [
+    {
+        "source": "${localEnv:XDG_RUNTIME_DIR}/docker.sock",
+        "target": "/var/run/docker.sock",
+        "type": "bind"
+    }
+  ]
 }
